@@ -44,6 +44,7 @@ In addition to that, it is required to evaluate all models and choose the champi
 --------------------------------
 ## Data Preparing and Preprocessing
 At this step, our task is to have a look at the data, explore its main characteristics: size & structure (how sentences, paragraphs, text are built), finally, understand how much of this data is useful for our needs? We started by reading the data.
+
 •	We used nltk library to access Gutenberg books. we chose the IDs of five different books but in the same genre.
 
 ```python
@@ -69,6 +70,7 @@ book_contents
 •	We tokenized the data to convert it into words
 •	We converted the cleaned data in lower case.
 •	Then, we lemmatized words and switched all the words to its base root mode .
+
 	**There is a function called (clean_text) that takes the uncleaned books as an input and returns the book cleaned.**
 
 ```python
@@ -147,6 +149,7 @@ lda_train = lda.fit_transform(BOW_train.toarray(), y_train)
 lda_test = lda.transform(BOW_test.toarray())
 ```
 ### Doc2Vec
+
 •	Doc2Vec is a method for representing a document as a vector and its build on word2vec approach.
 
 •	We trained a model from scratch to embed each sentence or paragraph of the data frame as a vector of 50 elements.
